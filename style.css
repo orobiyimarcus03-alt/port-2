@@ -9,7 +9,7 @@
     --text-size: 20px;
     --font-family: "Agbalumo", system-ui;
     --font-family-two: Arial, Helvetica, sans-serif;
-    --font-family-three: "Nunito", sans-serif ;
+    --font-family-three: "Nunito", sans-serif;
     --text-boldness: 600;
 }
 
@@ -65,32 +65,46 @@ nav>a {
 }
 
 nav>a:focus {
-   transform: scale3d(1.1, 1.1, 1);
+    transform: scale3d(1.1, 1.1, 1);
+}
+
+/* Keep touch and keyboard focus feedback within the nav palette. */
+nav>a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+nav>a:focus-visible {
+    outline: 2px solid var(--solid);
+    outline-offset: 4px;
 }
 
 /* profile */
 
-.profile{
+.profile {
     /* padding: 0px 10px; */
     display: flex;
     align-items: center;
     padding: 0px 20px;
     gap: 10px;
 }
-.profile>img{
+
+.profile>img {
     height: 55px;
     width: 55px;
     border-radius: 50%;
 }
-.intro>p{
+
+.intro>p {
     color: var(--light);
 }
-.intro>p:nth-child(1){
+
+.intro>p:nth-child(1) {
     font-size: 18px;
     font-weight: var(--text-boldness);
     font-family: var(--font-family-three);
 }
-.intro>p:nth-child(2){
+
+.intro>p:nth-child(2) {
     color: var(--solid);
     font-family: var(--font-family-two);
     font-size: 13px;
